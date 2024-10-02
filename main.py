@@ -159,7 +159,7 @@ def main():
         translated_caption = translate_caption(caption)
         torch.cuda.empty_cache()
 
-        f = open("./output/captions.txt", mode="wt", encoding="utf-8")
+        f = open("./output/captions.txt", mode="a+", encoding="utf-8")
         f.write(translated_caption)
         f.write("\n")
         f.close()
